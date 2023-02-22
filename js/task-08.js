@@ -11,14 +11,20 @@ form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-  const {
-    elements: { email, password }
-  } = event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
-    return console.log("Please fill in all the fields!");
+  const formEl = event.currentTarget;
+  const email = formEl.email.value;
+  const password = formEl.password.value;
+
+  if (email === "" || password === "") {
+    return alert('Всі поля форми мають бути заповнені!');
   }
 
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
+  const formData = {
+    email,
+    password,
+}    
+
+  console.log(formData);
   event.currentTarget.reset();
 }
