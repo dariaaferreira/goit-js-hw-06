@@ -9,7 +9,7 @@ inputText.addEventListener('blur', (event) =>{
                 inputText.classList.add(a) 
             };
     }
-    event.currentTarget.value.length == Number(inputText.dataset.length)
+    event.currentTarget.value.length === Number(inputText.dataset.length)
     ? setClass ('valid', 'invalid') 
     : setClass ('invalid', 'valid');    
 });
