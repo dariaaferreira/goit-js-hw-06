@@ -13,6 +13,8 @@ const images = [
   },
 ];
 
+const ulEl = document.querySelector('.gallery');
+
 const liEl = images.map(image => {
   return `<li class="gallery-item">
   <img 
@@ -23,6 +25,4 @@ const liEl = images.map(image => {
   </li>`;
 }).join(" ");
 
-
-const ulEl = document.querySelector('.gallery');
 ulEl.insertAdjacentHTML('beforeend', liEl);
